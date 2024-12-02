@@ -9,6 +9,7 @@ on:
     branches:
       - master
     paths: ["piped", "piped.toml", "pyproject.toml"]
+
 jobs:
   resync-piped:
     runs-on: ubuntu-latest
