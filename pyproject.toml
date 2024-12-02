@@ -1,0 +1,24 @@
+[project]
+name = "Cloudflared-Caddy"
+description = "A Container which has Caddy built with the Cloudflared plugin"
+version = "0.1.0"
+requires-python = ">=3.8"
+
+[dependency-groups]
+docs = [
+    "markdown-include>=0.8",
+    "mkdocs>=1.4.2",
+    "mkdocstrings[python]>=0.19",
+    "mkdocs-material>=8.5.11",
+    "mkdocs-minify-plugin>=0.6.4",
+]
+freeze-locks = ["uv"]
+templating = ["Jinja2>=3.1.2"]
+
+[tool.piped]
+default_sessions = ["verify-markup", "spell-check"]
+top_level_targets = []
+
+[tool.piped.github_actions.docker-publish]
+[tool.piped.github_actions.resync_piped]
+[tool.piped.github_actions.update_licence]
